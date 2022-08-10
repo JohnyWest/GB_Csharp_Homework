@@ -27,30 +27,6 @@
                 
             } while (true);
 
-            /* Короче хз, лучше наверное использовать:
-            uArray[i].Length
-            */
-
-
-            /* Еще один пример
-            Console.WriteLine("Введите строку");
-            string input = Console.ReadLine();
-            int ind = 0;
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (input.Substring(i, 1) != " ")
-                    ind++;
-            }
-            Console.WriteLine("Количество букв равно {0}", ind);
-            Console.ReadKey();
-            */
-
-
-            //Выбираем один элемент, сверяем длинну <=3 символа и пишем в переменную
-            /*
-            Переменную записать в новый МАССИВ
-            */
-
 
         }
     }   
