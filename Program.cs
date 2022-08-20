@@ -1,6 +1,6 @@
-﻿string[] FirstArray() // Метод для массива
+﻿string[] uArray() // Метод для массива
 {
-    Console.Write("Введите количество элементов массива:  ");
+    Console.Write("Введите с клавиатуры эллементы массива: ");
     int index = 0;
     string text = String.Empty;
     List<string> uList = new List<string>();
@@ -20,7 +20,7 @@
     return array;
 }
 
-(int, string[]) progArray(string[] array)//Метод создания нового массива
+(int, string[]) ProgArray(string[] array)//Метод создания второго массива
 {
     int count = 0;
         for (int i = 0; i < array.Length; i++) if (array[i].Length <= 3) count++;
@@ -53,3 +53,12 @@ string PrintArray(string[] array) // Метод печати массива
     result += "]";
     return result;
 }
+
+string[] array = uArray(); // Массив пользователя
+(int count, string[] progArray) = ProgArray(array); // Создём программный массив
+FillArray(array, progArray); // Заполняем второй массив элементами, чья длина <=3 символов
+Console.WriteLine();
+Console.WriteLine("Первоначальный массив: ");
+Console.WriteLine($"{PrintArray(array)} "); //Печатаем изначальный массив
+Console.WriteLine("Массив из элементов, длина которых <=3: ");
+Console.WriteLine($"{PrintArray(progArray)}"); //Вывод на консоль результата (массив длинной <=3 символа)
