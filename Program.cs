@@ -22,32 +22,34 @@
 
 (int, string[]) progArray(string[] array)//Метод создания нового массива
 {
-    
-}
-
-
-
-
-
-    
-/*    int elementsCount = int.Parse(Console.ReadLine()); // Вводим elementsCount и присваиваем ей ввод пользователя
-    int[] uArray = new int[elementsCount]; //создаём массив на основе elementsCount
-
-    for (int i = 0; i < uArray.Length; i++) //Бегаем по массиву и даём его обратно
-    {
-        Console.Write($"Введите элемент массива под индексом {i}: ");
-        uArray[i] = int.Parse(Console.ReadLine()); // Заполнить каждый элемент массива данными пользователя
-    }
-
-    int[] triArray = new int[]
-    for (int i = 0; i < length; i++)
-    {
-        uArray[i].Length = 
-    }
+    int count = 0;
+        for (int i = 0; i < array.Length; i++) if (array[i].Length <= 3) count++;
             
-    do
-    {
-          
-    } while (true);
+    string[] arrayResul = new string[count];
+    return (count, arrayResul);
 }
-*/ 
+
+
+void FillArray(string[] array, string[] fillArray)//Метод заполнения массива 
+{
+    int index = 0;
+        for (int i = 0; i < array.Length; i++) if (array[i].Length <= 3)
+            {
+                fillArray[index] = array[i];
+                index++;
+           }
+            
+}
+
+string PrintArray(string[] array) // Метод печати массива
+{
+    string result = String.Empty;
+    result += "[";
+    for (int i = 0; i < array.Length; i++)
+    {
+        result += '"' + array[i] + '"';
+        if (i < array.Length - 1) result += ',';
+    }
+    result += "]";
+    return result;
+}
